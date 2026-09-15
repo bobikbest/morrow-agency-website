@@ -15,10 +15,10 @@ export const Navbar = () => {
       </Link>
       <nav className="hidden md:flex gap-8 text-sm font-medium">
         <Link href="/portfolio" className="hover:opacity-70 transition-opacity">Кейсы</Link>
-        <Link href="#services" className="hover:opacity-70 transition-opacity">Услуги</Link>
-        <Link href="#contact" className="hover:opacity-70 transition-opacity">Связаться</Link>
+        <Link href="/#services" className="hover:opacity-70 transition-opacity">Услуги</Link>
+        <Link href="/#contact" className="hover:opacity-70 transition-opacity">Связаться</Link>
       </nav>
-      <button className="md:hidden">Меню</button>
+      <Link href="/#contact" className="md:hidden hover:opacity-70 transition-opacity">Связаться</Link>
     </motion.header>
   );
 };

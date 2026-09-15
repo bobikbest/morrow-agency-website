@@ -4,6 +4,7 @@ import { useRef } from 'react';
 
 export const MainVideoHero = () => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+  const hasTransitionVideo = false;
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
@@ -20,15 +21,26 @@ export const MainVideoHero = () => {
           4. Видео должно быть без звука (muted) для автовоспроизведения.
           Fallback/постер уже настроен.
         */}
-        <video 
-          src={`${basePath}/cat-interior-transition.mp4`}
-          poster={`${basePath}/poster-fallback.jpg`}
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover opacity-60"
-        />
+        {hasTransitionVideo ? (
+          <video
+            src={`${basePath}/cat-interior-transition.mp4`}
+            poster={`${basePath}/poster-fallback.jpg`}
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
+            className="w-full h-full object-cover opacity-60"
+          />
+        ) : (
+          <img
+            src={`${basePath}/poster-fallback.jpg`}
+            alt=""
+            width="1920"
+            height="1080"
+            className="w-full h-full object-cover opacity-60"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
       </motion.div>
       

@@ -17,8 +17,8 @@
 
 1. Сохраните готовое видео сцены с кошкой (рекомендуется H.264 .mp4 или .webm, без звука) в папку `public/`.
 2. Назовите его `cat-interior-transition.mp4`.
-3. В компоненте `MainVideoHero.tsx` найдите тег `<video>`.
-4. Убедитесь, что атрибуты `src="/cat-interior-transition.mp4"`, `autoPlay`, `muted`, `loop`, `playsInline` сохранены.
+3. В компоненте `MainVideoHero.tsx` переключите `hasTransitionVideo` на `true`.
+4. Убедитесь, что атрибуты `autoPlay`, `muted`, `loop`, `playsInline` сохранены.
 5. Замените fallback постер `poster="/poster-fallback.jpg"` на актуальный первый кадр вашего видео (бетонная комната с кошкой до анимации).
 
 ## Где заменить контент

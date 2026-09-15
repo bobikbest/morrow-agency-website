@@ -8,8 +8,8 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col md:items-end justify-between">
           <div className="flex gap-6 text-sm opacity-60">
-            <a href="#" className="hover:opacity-100 transition-opacity">Telegram</a>
-            <a href="#" className="hover:opacity-100 transition-opacity">Behance</a>
+            <span>Telegram</span>
+            <span>Behance</span>
           </div>
           <p className="text-sm opacity-40 mt-12 md:mt-0">© 2026 MORROW AGENCY. All rights reserved.</p>
         </div>

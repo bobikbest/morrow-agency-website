@@ -7,7 +7,7 @@ export const ServiceItem = ({ num, title, desc }: { num: string, title: string, 
     <motion.div 
       initial="initial"
       whileHover="hover"
-      className="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-foreground/10 cursor-pointer"
+      className="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-foreground/10"
     >
       <div className="flex gap-6 items-baseline mb-4 md:mb-0">
         <span className="text-sm opacity-40 font-mono tabular-nums">{num}</span>
@@ -15,7 +15,8 @@ export const ServiceItem = ({ num, title, desc }: { num: string, title: string, 
       </div>
       <div className="flex items-center gap-6 md:w-1/3 justify-between">
         <p className="text-sm opacity-60 leading-relaxed">{desc}</p>
-        <motion.div 
+        <motion.div
+          aria-hidden="true"
           variants={{ initial: { rotate: 0 }, hover: { rotate: 45 } }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="w-10 h-10 rounded-full bg-accent flex items-center justify-center shrink-0 group-hover:bg-foreground group-hover:text-background transition-colors"
