@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F8F8F7; /* Off-white, warm and expensive */
+  --foreground: #111110;
+  --accent: #E5E4E0;
+  --surface: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111110;
+    --foreground: #F8F8F7;
+    --accent: #2A2A28;
+    --surface: #1A1A19;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "tnum", "ss01";
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
